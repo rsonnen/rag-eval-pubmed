@@ -28,7 +28,7 @@ lint:
 
 typecheck:
 	@echo "Running mypy type checking..."
-	uv run mypy jats_parser.py pmc_client.py build_pubmed.py
+	uv run mypy download_papers.py jats_parser.py pmc_client.py build_pubmed.py
 
 security:
 	@echo "Running security checks with bandit..."
