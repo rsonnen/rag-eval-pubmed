@@ -1,0 +1,36 @@
+name: "Epidemiology Papers"
+
+corpus_context: >
+  300 full-text PubMed Central open-access papers on epidemiology, 2018-2024.
+  MeSH terms: Epidemiology, Public Health, Epidemiologic Studies. Includes
+  cohort studies, case-control investigations, outbreak reports, and
+  meta-analyses. Documents contain detailed methodology sections, statistical
+  analyses with confidence intervals, and often supplementary data tables
+  with population characteristics and exposure definitions.
+
+scenarios:
+  graduate_exam:
+    name: "Graduate Epidemiology Exam"
+    description: >
+      You are creating questions for a graduate epidemiology methods course.
+      Students must demonstrate mastery of study design principles, ability
+      to identify sources of bias, understanding of when different measures
+      (RR, OR, HR) are appropriate, and skill in interpreting results with
+      appropriate caution about confounding and selection effects.
+
+  public_health:
+    name: "Public Health Practice Review"
+    description: >
+      You are creating questions for public health practitioners. They need
+      to translate epidemiologic findings into actionable guidance - knowing
+      what surveillance data can and cannot tell us, when outbreak findings
+      justify interventions, and how to communicate risk findings to
+      policymakers and the public.
+
+  rag_eval:
+    name: "RAG System Evaluation"
+    description: >
+      You are testing whether a retrieval system actually read this paper.
+      Questions need specific, verifiable answers - exact incidence rates,
+      particular confidence intervals, specific study populations, exposure
+      definitions that require the document.

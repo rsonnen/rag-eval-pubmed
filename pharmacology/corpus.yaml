@@ -1,0 +1,35 @@
+name: "Pharmacology Papers"
+
+corpus_context: >
+  300 full-text PubMed Central open-access papers on pharmacology, 2018-2024.
+  MeSH terms: Pharmacology, Drug Therapy, Pharmaceutical Preparations. Includes
+  drug mechanism studies, clinical pharmacokinetic analyses, therapeutic trials,
+  and drug interaction research. Documents contain dose-response data, plasma
+  concentration measurements, receptor binding assays, and comparative
+  efficacy outcomes.
+
+scenarios:
+  graduate_exam:
+    name: "Graduate Pharmacology Exam"
+    description: >
+      You are creating questions for a graduate pharmacology course. Students
+      need to demonstrate understanding of drug-receptor interactions,
+      pharmacokinetic principles, and how mechanism of action relates to
+      therapeutic and adverse effects. They should interpret research findings
+      in the context of established pharmacological principles.
+
+  clinical_review:
+    name: "Clinical Pharmacology Review"
+    description: >
+      You are creating questions for clinical pharmacology trainees. They need
+      to apply pharmacological research to prescribing decisions - understanding
+      when PK/PD data support dose adjustments, recognizing clinically significant
+      interactions, and interpreting therapeutic monitoring results in context
+      of published evidence.
+
+  rag_eval:
+    name: "RAG System Evaluation"
+    description: >
+      You are testing whether a retrieval system actually read this paper.
+      Questions need specific, verifiable answers - exact drug concentrations,
+      particular Ki/Kd values, specific efficacy outcomes that require the document.

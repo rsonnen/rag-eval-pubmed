@@ -1,0 +1,51 @@
+epidemiology:
+  description: |
+    Open access epidemiology and public health research papers from PubMed Central.
+    Covers disease epidemiology, population health, health outcomes research,
+    and public health interventions. Targets recent high-quality research for
+    RAG evaluation of biomedical retrieval systems.
+
+  source: pubmed
+
+  search_strategy:
+    mesh_terms:
+      - '"Epidemiology"[Mesh]'
+      - '"Public Health"[Mesh]'
+      - '"Epidemiologic Studies"[Mesh]'
+    filters:
+      - '"open access"[filter]'
+    date_range: [2018, 2024]
+
+  target_count: 300
+
+  evaluator_model: gpt-5-mini
+  confidence_threshold: 0.7
+
+  validation_prompt: |
+    You are evaluating whether a scientific paper belongs in a corpus of
+    EPIDEMIOLOGY AND PUBLIC HEALTH RESEARCH papers for biomedical RAG evaluation.
+
+    CONTENT REQUIREMENTS:
+    The paper must be PRIMARILY about epidemiology or public health, including:
+    - Disease epidemiology and surveillance
+    - Risk factor identification and analysis
+    - Population-based health studies
+    - Health outcomes research
+    - Public health interventions and policy
+    - Health disparities and social determinants
+    - Environmental epidemiology
+    - Cohort, case-control, and cross-sectional studies
+
+    INCLUDE:
+    - Original epidemiological research with substantial findings
+    - Systematic reviews and meta-analyses
+    - Large population-based studies
+    - Health services research with epidemiological methods
+
+    EXCLUDE:
+    - Clinical trials of specific treatments (use pharmacology corpus)
+    - Pure laboratory or basic science research
+    - Editorials or commentaries without substantial content
+    - Case reports or small case series
+    - Study protocols without results
+    - Corrigenda, errata, or retractions

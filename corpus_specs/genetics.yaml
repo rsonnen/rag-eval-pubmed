@@ -1,0 +1,51 @@
+genetics:
+  description: |
+    Open access genetics and genomics research papers from PubMed Central.
+    Covers human genetics, genomic medicine, genetic disorders, and
+    molecular genetics with clinical relevance. Targets recent high-quality
+    research for RAG evaluation.
+
+  source: pubmed
+
+  search_strategy:
+    mesh_terms:
+      - '"Genetics"[Mesh]'
+      - '"Genomics"[Mesh]'
+      - '"Genetic Diseases, Inborn"[Mesh]'
+    filters:
+      - '"open access"[filter]'
+    date_range: [2018, 2024]
+
+  target_count: 300
+
+  evaluator_model: gpt-5-mini
+  confidence_threshold: 0.7
+
+  validation_prompt: |
+    You are evaluating whether a scientific paper belongs in a corpus of
+    GENETICS AND GENOMICS RESEARCH papers for biomedical RAG evaluation.
+
+    CONTENT REQUIREMENTS:
+    The paper must be PRIMARILY about genetics or genomics, including:
+    - Human genetics and genetic disorders
+    - Genomic medicine and precision medicine
+    - Genetic testing and counseling
+    - Genome-wide association studies (GWAS)
+    - Pharmacogenomics
+    - Cancer genetics
+    - Rare genetic diseases
+    - Gene therapy and genetic treatments
+
+    INCLUDE:
+    - Original research articles with substantial findings
+    - Systematic reviews and meta-analyses
+    - Large-scale genomic studies
+    - Translational genetics research with clinical relevance
+
+    EXCLUDE:
+    - Pure computational or bioinformatics methods papers
+    - Non-human genetics without clinical translation
+    - Editorials or commentaries without substantial content
+    - Case reports with single patients
+    - Study protocols without results
+    - Corrigenda, errata, or retractions

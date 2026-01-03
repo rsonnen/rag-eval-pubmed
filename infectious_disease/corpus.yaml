@@ -1,0 +1,33 @@
+name: "Infectious Disease Papers"
+
+corpus_context: >
+  300 full-text PubMed Central open-access papers on infectious diseases,
+  2018-2024. MeSH terms: Communicable Diseases, Infection, Infectious Disease
+  Medicine. Covers bacterial, viral, fungal, and parasitic infections including
+  outbreak reports, resistance surveillance, diagnostic evaluations, and
+  treatment studies. Documents contain microbiological data and epidemiological
+  analyses.
+
+scenarios:
+  graduate_exam:
+    name: "Graduate Infectious Disease Exam"
+    description: >
+      You are creating questions for a graduate course in infectious diseases.
+      Students need to demonstrate understanding of pathogen biology,
+      host-pathogen interactions, epidemiological principles, and how
+      diagnostic and treatment decisions are made based on evidence.
+
+  clinical_review:
+    name: "ID Fellowship Review"
+    description: >
+      You are creating questions for infectious disease fellows. They need
+      to apply research findings to clinical practice - choosing appropriate
+      diagnostics, selecting antimicrobials based on evidence, and recognizing
+      when published data apply to their patients.
+
+  rag_eval:
+    name: "RAG System Evaluation"
+    description: >
+      You are testing whether a retrieval system actually read this paper.
+      Questions need specific, verifiable answers - exact organism names,
+      particular resistance findings, specific outcomes that require the document.

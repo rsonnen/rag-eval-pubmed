@@ -1,0 +1,50 @@
+cardiology:
+  description: |
+    Open access cardiology and cardiovascular research papers from PubMed Central.
+    Covers heart diseases, vascular conditions, cardiac interventions, and
+    cardiovascular epidemiology. Targets recent high-quality research for
+    RAG evaluation of biomedical retrieval systems.
+
+  source: pubmed
+
+  search_strategy:
+    mesh_terms:
+      - '"Cardiology"[Mesh]'
+      - '"Heart Diseases"[Mesh]'
+      - '"Cardiovascular Diseases"[Mesh]'
+    filters:
+      - '"open access"[filter]'
+    date_range: [2018, 2024]
+
+  target_count: 300
+
+  evaluator_model: gpt-5-mini
+  confidence_threshold: 0.7
+
+  validation_prompt: |
+    You are evaluating whether a scientific paper belongs in a corpus of
+    CARDIOLOGY AND CARDIOVASCULAR RESEARCH papers for biomedical RAG evaluation.
+
+    CONTENT REQUIREMENTS:
+    The paper must be PRIMARILY about cardiovascular medicine, including:
+    - Heart diseases (coronary artery disease, heart failure, arrhythmias)
+    - Vascular diseases (hypertension, atherosclerosis, aneurysms)
+    - Cardiac imaging and diagnostics
+    - Interventional cardiology and cardiac surgery
+    - Cardiovascular pharmacology
+    - Cardiac rehabilitation and prevention
+    - Electrophysiology and device therapy
+
+    INCLUDE:
+    - Original research articles with substantial findings
+    - Systematic reviews and meta-analyses
+    - Clinical trial reports
+    - Translational cardiovascular research
+
+    EXCLUDE:
+    - Purely methodological papers not specific to cardiology
+    - Editorials or commentaries without substantial content
+    - Case reports with single patients
+    - Papers where cardiovascular aspects are secondary
+    - Study protocols without results
+    - Corrigenda, errata, or retractions

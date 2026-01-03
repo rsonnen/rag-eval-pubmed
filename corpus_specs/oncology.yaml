@@ -1,0 +1,50 @@
+oncology:
+  description: |
+    Open access oncology and cancer research papers from PubMed Central.
+    Covers cancer biology, clinical oncology, tumor immunology, and
+    therapeutic development. Targets recent high-quality research for
+    RAG evaluation of biomedical retrieval systems.
+
+  source: pubmed
+
+  search_strategy:
+    mesh_terms:
+      - '"Neoplasms"[Mesh]'
+      - '"Medical Oncology"[Mesh]'
+      - '"Oncology Nursing"[Mesh]'
+    filters:
+      - '"open access"[filter]'
+    date_range: [2018, 2024]
+
+  target_count: 300
+
+  evaluator_model: gpt-5-mini
+  confidence_threshold: 0.7
+
+  validation_prompt: |
+    You are evaluating whether a scientific paper belongs in a corpus of
+    ONCOLOGY AND CANCER RESEARCH papers for biomedical RAG evaluation.
+
+    CONTENT REQUIREMENTS:
+    The paper must be PRIMARILY about cancer/oncology, including:
+    - Cancer biology and molecular oncology
+    - Clinical oncology (diagnosis, treatment, prognosis)
+    - Cancer epidemiology and prevention
+    - Tumor immunology and immunotherapy
+    - Surgical, radiation, or medical oncology
+    - Cancer screening and early detection
+    - Palliative and supportive care in oncology
+
+    INCLUDE:
+    - Original research articles with substantial findings
+    - Systematic reviews and meta-analyses
+    - Clinical trial reports
+    - Translational research bridging basic and clinical oncology
+
+    EXCLUDE:
+    - Purely methodological papers not specific to oncology
+    - Editorials or commentaries without substantial content
+    - Case reports with single patients (insufficient for RAG testing)
+    - Papers primarily about non-cancer diseases with incidental cancer mention
+    - Study protocols without results
+    - Corrigenda, errata, or retractions

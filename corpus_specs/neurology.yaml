@@ -1,0 +1,51 @@
+neurology:
+  description: |
+    Open access neurology and neuroscience research papers from PubMed Central.
+    Covers neurological disorders, brain and nervous system diseases,
+    neuroimaging, and clinical neurology. Targets recent high-quality research
+    for RAG evaluation of biomedical retrieval systems.
+
+  source: pubmed
+
+  search_strategy:
+    mesh_terms:
+      - '"Neurology"[Mesh]'
+      - '"Nervous System Diseases"[Mesh]'
+      - '"Neurosciences"[Mesh]'
+    filters:
+      - '"open access"[filter]'
+    date_range: [2018, 2024]
+
+  target_count: 300
+
+  evaluator_model: gpt-5-mini
+  confidence_threshold: 0.7
+
+  validation_prompt: |
+    You are evaluating whether a scientific paper belongs in a corpus of
+    NEUROLOGY AND NEUROSCIENCE RESEARCH papers for biomedical RAG evaluation.
+
+    CONTENT REQUIREMENTS:
+    The paper must be PRIMARILY about neurology or clinical neuroscience, including:
+    - Neurological disorders (stroke, epilepsy, Parkinson's, Alzheimer's, MS)
+    - Neurodegenerative diseases
+    - Headache and pain disorders
+    - Movement disorders
+    - Neuro-oncology
+    - Neuroimaging and diagnostics
+    - Neuroimmunology
+    - Clinical neurophysiology
+
+    INCLUDE:
+    - Original research articles with substantial findings
+    - Systematic reviews and meta-analyses
+    - Clinical trial reports
+    - Translational neuroscience research with clinical relevance
+
+    EXCLUDE:
+    - Basic neuroscience without clinical relevance
+    - Pure psychology or behavioral studies
+    - Editorials or commentaries without substantial content
+    - Case reports with single patients
+    - Study protocols without results
+    - Corrigenda, errata, or retractions

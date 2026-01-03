@@ -1,0 +1,32 @@
+name: "Oncology Papers"
+
+corpus_context: >
+  300 full-text PubMed Central open-access papers on oncology, 2018-2024.
+  MeSH terms: Neoplasms, Medical Oncology, Oncology Nursing. Includes clinical
+  trials, biomarker studies, and outcome analyses across cancer types.
+  Documents contain survival analyses, treatment protocols, and molecular
+  profiling data.
+
+scenarios:
+  graduate_exam:
+    name: "Graduate Oncology Exam"
+    description: >
+      You are creating questions for a graduate course in cancer biology
+      and clinical oncology. Students need to demonstrate they understand
+      how basic science translates to treatment, can critically evaluate
+      clinical trial design, and recognize what findings mean for patients.
+
+  clinical_review:
+    name: "Oncology Fellowship Review"
+    description: >
+      You are creating questions for oncology fellows preparing for boards.
+      They need to interpret trial results for clinical decision-making -
+      understanding when data support treatment changes, recognizing
+      limitations of study populations, and applying evidence to patients.
+
+  rag_eval:
+    name: "RAG System Evaluation"
+    description: >
+      You are testing whether a retrieval system actually read this paper.
+      Questions need specific, verifiable answers that require the document -
+      exact survival numbers, specific drug doses, particular statistical results.

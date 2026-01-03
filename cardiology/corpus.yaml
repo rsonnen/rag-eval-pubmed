@@ -1,0 +1,35 @@
+name: "Cardiology Papers"
+
+corpus_context: >
+  300 full-text PubMed Central open-access papers on cardiology, 2018-2024.
+  MeSH terms: Cardiology, Heart Diseases, Cardiovascular Diseases. Includes
+  clinical trials, imaging studies, interventional outcomes, and mechanistic
+  research. Documents contain echocardiographic measurements, catheterization
+  data, biomarker analyses, and outcomes from pharmacological/interventional
+  treatments.
+
+scenarios:
+  graduate_exam:
+    name: "Graduate Cardiovascular Exam"
+    description: >
+      You are creating questions for a graduate cardiovascular physiology
+      course. Students need to demonstrate understanding of cardiac mechanics,
+      electrophysiology, and hemodynamics. They should be able to interpret
+      research findings in the context of underlying pathophysiology and
+      recognize how study results inform our understanding of disease mechanisms.
+
+  clinical_review:
+    name: "Cardiology Fellowship Review"
+    description: >
+      You are creating questions for cardiology fellows preparing for boards.
+      They need to apply research to patient care - interpreting imaging and
+      hemodynamic data, selecting appropriate interventions based on trial
+      evidence, and recognizing which study findings apply to specific
+      clinical scenarios.
+
+  rag_eval:
+    name: "RAG System Evaluation"
+    description: >
+      You are testing whether a retrieval system actually read this paper.
+      Questions need specific, verifiable answers - exact ejection fractions,
+      particular hemodynamic values, specific outcomes that require the document.

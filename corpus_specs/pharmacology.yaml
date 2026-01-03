@@ -1,0 +1,51 @@
+pharmacology:
+  description: |
+    Open access pharmacology and drug therapy research papers from PubMed Central.
+    Covers drug development, clinical pharmacology, pharmacokinetics,
+    pharmacogenomics, and therapeutic interventions. Targets recent high-quality
+    research for RAG evaluation.
+
+  source: pubmed
+
+  search_strategy:
+    mesh_terms:
+      - '"Pharmacology"[Mesh]'
+      - '"Drug Therapy"[Mesh]'
+      - '"Pharmaceutical Preparations"[Mesh]'
+    filters:
+      - '"open access"[filter]'
+    date_range: [2018, 2024]
+
+  target_count: 300
+
+  evaluator_model: gpt-5-mini
+  confidence_threshold: 0.7
+
+  validation_prompt: |
+    You are evaluating whether a scientific paper belongs in a corpus of
+    PHARMACOLOGY AND DRUG THERAPY RESEARCH papers for biomedical RAG evaluation.
+
+    CONTENT REQUIREMENTS:
+    The paper must be PRIMARILY about pharmacology or drug therapy, including:
+    - Drug development and discovery
+    - Clinical pharmacology and therapeutics
+    - Pharmacokinetics and pharmacodynamics
+    - Pharmacogenomics and personalized medicine
+    - Drug safety and adverse effects
+    - Drug interactions
+    - Pharmaceutical formulations and delivery
+    - Therapeutic drug monitoring
+
+    INCLUDE:
+    - Original research articles with substantial findings
+    - Systematic reviews and meta-analyses of drug therapies
+    - Clinical trial reports
+    - Translational pharmacology research
+
+    EXCLUDE:
+    - Pure chemistry without pharmacological relevance
+    - Herbal or alternative medicine without rigorous methodology
+    - Editorials or commentaries without substantial content
+    - Case reports with single patients
+    - Study protocols without results
+    - Corrigenda, errata, or retractions

@@ -1,0 +1,28 @@
+name: "Psychiatry Papers"
+
+corpus_context: >
+  300 PubMed Central open-access papers on psychiatry, 2018-2024. MeSH
+  terms: Psychiatry, Mental Disorders, Mental Health. Topics include
+  psychiatric diagnosis, treatment outcomes, neurobiological mechanisms,
+  and psychosocial interventions. Mix of clinical trials and observational studies.
+
+scenarios:
+  graduate_exam:
+    name: "Graduate Psychiatry Exam"
+    description: >
+      You are creating questions for a graduate psychiatry/mental health
+      course. Questions should test understanding of diagnostic criteria,
+      treatment mechanisms, and interpretation of psychiatric research.
+
+  clinical_review:
+    name: "Psychiatry Clinical Review"
+    description: >
+      You are creating questions for psychiatry residents. Questions should
+      test understanding of DSM criteria, medication selection, and
+      evidence-based psychotherapy approaches.
+
+  rag_eval:
+    name: "RAG System Evaluation"
+    description: >
+      Questions must have specific answers - diagnostic criteria, medication
+      dosing, outcome measures, effect sizes.

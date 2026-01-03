@@ -1,0 +1,33 @@
+name: "Genetics Papers"
+
+corpus_context: >
+  300 full-text PubMed Central open-access papers on genetics and genomics,
+  2018-2024. MeSH terms: Genetics, Genomics, Genetic Diseases Inborn. Mix of
+  GWAS studies, sequencing analyses, functional genomics, and clinical genetic
+  testing papers. Documents include methodology sections, statistical analyses,
+  and often supplementary variant tables.
+
+scenarios:
+  graduate_exam:
+    name: "Graduate Genetics Qualifying Exam"
+    description: >
+      You are creating questions for a PhD qualifying exam in genetics.
+      Students must demonstrate they can critically read research papers,
+      understand experimental design choices, interpret results in context,
+      and recognize methodological limitations. They have strong backgrounds
+      but are not yet independent researchers.
+
+  clinical_review:
+    name: "Clinical Genetics Board Review"
+    description: >
+      You are creating questions for clinicians preparing for genetics board
+      certification. They need to translate research findings to patient care
+      - understanding what results mean clinically, when findings change
+      management, and how to communicate uncertainty to patients.
+
+  rag_eval:
+    name: "RAG System Evaluation"
+    description: >
+      You are testing whether a retrieval system actually read this paper.
+      Questions need specific, verifiable answers that require the document -
+      exact numbers, specific names, particular findings that cannot be guessed.

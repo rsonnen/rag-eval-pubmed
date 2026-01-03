@@ -1,0 +1,32 @@
+name: "Neurology Papers"
+
+corpus_context: >
+  300 full-text PubMed Central open-access papers on neurology, 2018-2024.
+  MeSH terms: Neurology, Nervous System Diseases, Neurosciences. Covers
+  neurodegenerative diseases, stroke, epilepsy, MS, headache, and other
+  neurological conditions. Documents include neuroimaging data, cognitive
+  assessments, disability measures, and treatment outcomes.
+
+scenarios:
+  graduate_exam:
+    name: "Graduate Neurology Exam"
+    description: >
+      You are creating questions for a graduate neuroscience/neurology course.
+      Students need to demonstrate understanding of disease mechanisms,
+      interpret clinical and imaging findings, and critically evaluate
+      evidence for diagnostic and treatment approaches.
+
+  clinical_review:
+    name: "Neurology Residency Review"
+    description: >
+      You are creating questions for neurology residents preparing for boards.
+      They need to apply research to patient care - recognizing clinical
+      patterns, interpreting diagnostic studies, and selecting treatments
+      based on evidence from the literature.
+
+  rag_eval:
+    name: "RAG System Evaluation"
+    description: >
+      You are testing whether a retrieval system actually read this paper.
+      Questions need specific, verifiable answers - exact imaging findings,
+      particular scale scores, specific outcomes from the study.
